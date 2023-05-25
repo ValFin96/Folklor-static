@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-// import './mcFormStyles.scss';
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 import InputField from "./InputField";
 
 const NewsletterForm = ({ status, message, onValidated }) => {
 
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
-    // const [lastName, setLastName] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,7 +14,6 @@ const NewsletterForm = ({ status, message, onValidated }) => {
             onValidated({
                 EMAIL: email,
                 MERGE1: firstName,
-                // MERGE7: lastName,
             });
 
             setEmail('');

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import './Newsletter.css';
-import SubHeading from '../SubHeading/SubHeading';
 import NewsletterForm from './NewsletterForm';
 import './Newsletter.css';
 
