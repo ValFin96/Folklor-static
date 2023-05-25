@@ -3,7 +3,12 @@ import { SubHeading } from '../../components';
 import './Header.css';
 
 
-const Header = () => (
+const Header = () => {
+  function handleClick() {
+    window.open("https://www.opentable.com.au/r/folklor-restaurant-and-bar-reservations-dawes-point?restref=196004&lang=en-AU&ot_source=Restaurant%20website")
+  }
+
+return(
   <div className="app__header app__wrapper section__padding" id="home">
     <div className='app__wrapper_info'>
       {/* <SubHeading title="Chase the new flavour"/> */}
@@ -11,7 +16,7 @@ const Header = () => (
       <h1 className="p__opensans" style={{margin: '2rem 0'}}>
         Welcome to Folklor, where the flavors of many nations blend into a vibrant culinary celebration.
       </h1>
-      <button type="button" className="custom__button_mobile">Book Table</button>
+      <button type="button" className="custom__button_mobile" onClick={handleClick}>Book Table</button>
 
     </div>
 
@@ -20,5 +25,5 @@ const Header = () => (
     </div> */}
   </div>
 );
-
+  }
 export default Header;
