@@ -31,7 +31,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
             <h3 className="mc__title">Join our email list for future updates.</h3>
             <div className="mc__field-container">
                 <InputField
-                    label="First Name"
+                    // label="First Name"
                     onChangeHandler={setFirstName}
                     type="text"
                     value={firstName}
@@ -40,7 +40,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
                 />
 
                 <InputField
-                    label="Last Name"
+                    // label="Last Name"
                     onChangeHandler={setLastName}
                     type="text"
                     value={lastName}
@@ -49,7 +49,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
                 />
 
                 <InputField
-                    label="Email"
+                    // label="Email"
                     onChangeHandler={setEmail}
                     type="email"
                     value={email}
