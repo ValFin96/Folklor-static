@@ -55,6 +55,9 @@ const Navbar = () => {
               <li className="p__opensans">
                 <a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a>
               </li>
+              <li className="p__opensans">
+                <a onClick={handleClick} style={{ lineHeight: '2.5rem' }}>Book Table</a>
+              </li>
             </ul>
           </div>
         )}
