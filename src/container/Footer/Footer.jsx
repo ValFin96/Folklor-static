@@ -23,6 +23,7 @@ const Footer = () => {
       <div className='app__footer-links'>
         <div className='app__footer-links_contact'>
           <h2 className='app__footer-headtext'>Contact Us</h2>
+          <a className='p__opensans'style={{textDecoration:'underline', textTransform:'none' }}href="mailto:hola@folklorrestaurant.com.au">hola@folklorrestaurant.com.au</a>
           <p className='p__opensans'>Shop 7&8 16A Hickson Road, Dawes Point NSW 2000</p>
           <p className='p__opensans'></p>
         </div>
