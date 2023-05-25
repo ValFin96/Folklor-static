@@ -7,7 +7,7 @@ import './Footer.css';
 const Footer = () => {
 
   function handleClickInsta() {
-    window.open("https://www.instagram.com/folklor.restaurant/")
+    window.open("https://www.instagram.com/folklorwalshbay/")
   }
 
   function handleClickFb() {

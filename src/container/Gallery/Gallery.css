@@ -125,7 +125,7 @@
 
 @media screen and (max-width: 650px) {
     .app__gallery {
-        padding: 4rem 0 4rem 2rem;
+        padding: 4rem 0 0rem 2rem;
     }
 
     .app__gallery-content {

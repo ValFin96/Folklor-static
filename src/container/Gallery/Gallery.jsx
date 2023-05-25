@@ -17,7 +17,7 @@ const Gallery = () => {
   }
 
   function handleClick() {
-    window.open("https://www.instagram.com/folklor.restaurant/")
+    window.open("https://www.instagram.com/folklorwalshbay/")
   }
 
   return (

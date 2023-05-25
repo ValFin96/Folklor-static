@@ -14,7 +14,7 @@ const InputField = props => {
     if (props.type === "submit") {
         return (
             <input
-                className='primaryBtn primaryBtn--big g__justify-self-center'
+                className='app__newsletter-button'
                 type='submit'
                 value={props.label}
                 disabled={validateInput(props.formValues)}

@@ -11,7 +11,8 @@ const Newsletter = (props) => {
   const postUrl = `https://warikerestaurant.us20.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
 
   return (
-    <div className="mc__form-container">
+    <div className="app__newsletter">
+      <h3 className="app__newsletter-heading">Join our email list for future updates</h3>
       <MailchimpSubscribe
         url={postUrl}
         render={({ subscribe, status, message }) => (

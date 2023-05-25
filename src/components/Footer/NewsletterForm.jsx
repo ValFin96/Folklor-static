@@ -7,31 +7,27 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    // const [lastName, setLastName] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         email &&
             firstName &&
-            lastName &&
             email.indexOf("@") > -1 &&
             onValidated({
                 EMAIL: email,
                 MERGE1: firstName,
-                MERGE7: lastName,
+                // MERGE7: lastName,
             });
 
             setEmail('');
             setFirstName('');
-            setLastName('');
     }
 
     return (
         <form className="mc__form" onSubmit={(e) => handleSubmit(e)}>
-            <h3 className="mc__title">Join our email list for future updates.</h3>
-            <div className="mc__field-container">
+            <div className="app__newsletter-input">
                 <InputField
-                    // label="First Name"
                     onChangeHandler={setFirstName}
                     type="text"
                     value={firstName}
@@ -40,16 +36,6 @@ const NewsletterForm = ({ status, message, onValidated }) => {
                 />
 
                 <InputField
-                    // label="Last Name"
-                    onChangeHandler={setLastName}
-                    type="text"
-                    value={lastName}
-                    placeholder="Doe"
-                    isRequired
-                />
-
-                <InputField
-                    // label="Email"
                     onChangeHandler={setEmail}
                     type="email"
                     value={email}
@@ -60,9 +46,9 @@ const NewsletterForm = ({ status, message, onValidated }) => {
             </div>
 
             <InputField
-                label="subscribe"
+                label="Subscribe"
                 type="submit"
-                formValues={[email, firstName, lastName]}
+                formValues={[email, firstName]}
             />
         </form>
         
