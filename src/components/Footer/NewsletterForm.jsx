@@ -27,7 +27,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
                     onChangeHandler={setFirstName}
                     type="text"
                     value={firstName}
-                    placeholder="Jane"
+                    placeholder="Your Name"
                     isRequired
                 />
 
@@ -35,7 +35,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
                     onChangeHandler={setEmail}
                     type="email"
                     value={email}
-                    placeholder="your@email.com"
+                    placeholder="Your@email.com"
                     isRequired
                 />
 
