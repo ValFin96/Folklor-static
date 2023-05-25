@@ -24,7 +24,7 @@ const Gallery = () => {
     <div className='app__gallery flex__center'>
       <div className="app__gallery-content">
         <SubHeading title='Instagram' />
-        <h1 className='headtext__cormorant'>Photo Gallery</h1>
+        <h2 className='headtext__cormorant'>Photo Gallery</h2>
         <p className="p__opensans" style={{ color: '#AAA', marginTop: '2rem' }}>
           Check out our mouthwatering food photography and get a taste of what you can expect from our fusion-inspired dishes.
         </p>
@@ -34,7 +34,7 @@ const Gallery = () => {
         <div className='app__gallery-images_container' ref={scrollRef}>
           {galleryImages.map((image, index) => (
             <div className='app__gallery-images_card flex__center' key={`gallery_image-${index + 1}`}>
-              <img src={image} alt='gallery' onClick={handleClick} />
+              <img src={image} alt='gallery' onClick={handleClick} draggable="false"/>
               <BsInstagram className='gallery__image-icon' onClick={handleClick} />
             </div>
           ))}

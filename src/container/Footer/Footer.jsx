@@ -22,7 +22,7 @@ const Footer = () => {
 
       <div className='app__footer-links'>
         <div className='app__footer-links_contact'>
-          <h1 className='app__footer-headtext'>Contact Us</h1>
+          <h2 className='app__footer-headtext'>Contact Us</h2>
           <p className='p__opensans'>Shop 7&8 16A Hickson Road, Dawes Point NSW 2000</p>
           <p className='p__opensans'></p>
         </div>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='app__footer-links_work'>
-          <h1 className='app__footer-headtext'>Working Hours</h1>
+          <h2 className='app__footer-headtext'>Working Hours</h2>
           <p className='p__opensans'>Grand Opening is on the 1st of June!</p>
           {/* <p className='p__opensans'>12:00 am - 05:00 pm </p>
         <p className='p__opensans'>Saturday - Sunday:</p>

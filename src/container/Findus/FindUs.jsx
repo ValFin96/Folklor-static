@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { SubHeading } from '../../components';
 import { images } from '../../constants';
 
@@ -9,11 +10,20 @@ const FindUs = () => {
 
   return (
     <div className="app__bg app__wrapper section__padding" id='contact'>
+      <Helmet>
+<title>Contact Us</title>
+<meta name='description' content='Find where Folklor is located' />
+<meta property="og:type" content="website" />
+<meta property="og:title" content='Contact Us' />
+<meta property="og:description" content='Find where Folklor is located' />
+<meta property="og:image" content="%PUBLIC_URL%/favicon.ico?v=2" />
+<meta property="og:url" content="https://folklorrestaurant.com.au/#contact" />
+</Helmet>
       <div className='app__wrapper_info'>
         <SubHeading title='Contact' />
-        <h1 className='headtext__cormorant' style={{ marginBottom: '3rem' }}>
+        <h2 className='headtext__cormorant' style={{ marginBottom: '3rem' }}>
           Find Us
-        </h1>
+        </h2>
         <div className='app__warapper-content'>
           <p className='p__opensans'>Shop 7&8 16A Hickson Road, Dawes Point NSW 2000</p>
           {/* <p className='p__cormorant' style={{ color: '#DCCA87', margin: '2rem 0' }}>Opening Hours</p>

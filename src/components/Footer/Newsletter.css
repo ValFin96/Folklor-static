@@ -56,6 +56,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 @media screen and (min-width: 2000px) {
@@ -78,7 +79,7 @@
 
 @media screen and (max-width: 650px) {
     .app__newsletter {
-        padding: 1rem 0;
+        padding: 1rem 1rem;
         border: none;
         margin-bottom: 2rem;
     }
@@ -89,6 +90,7 @@
     }
     .app__newsletter-button{
         margin: 0;
+        -webkit-appearance: none;
     }
 }
 

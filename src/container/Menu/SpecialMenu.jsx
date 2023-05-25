@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { SubHeading, MenuItem } from '../../components';
 import { images, data } from '../../constants';
 // import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -9,9 +10,18 @@ function SpecialMenu() {
 
 return (
   <div className="app__specialMenu flex__center section__padding" id='menu'>
+    <Helmet>
+<title>Folklor's Menu</title>
+<meta name='description' content='Discover our menu' />
+<meta property="og:type" content="website" />
+<meta property="og:title" content='Folklor Restaurant Menu' />
+<meta property="og:description" content='Discover our menu' />
+<meta property="og:image" content="%PUBLIC_URL%/favicon.ico?v=2" />
+<meta property="og:url" content="https://folklorrestaurant.com.au/#menu" />
+</Helmet>
 <div className='app__specialMenu-title'>
     <SubHeading title="Preview Our Menu"/>
-    <h1 className='headtext__cormorant'>Menu</h1>
+    <h2 className='headtext__cormorant'>Menu</h2>
 </div>
 
 <div className='app__specialMenu-menu'>

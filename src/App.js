@@ -1,4 +1,5 @@
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AboutUs, FindUs, Footer, Gallery, Header, SpecialMenu } from './container';
 import { Navbar } from './components';
@@ -9,6 +10,7 @@ const App = () => {
 
   return (
     <div>
+      <HelmetProvider>
       <Navbar />
       <Header />
       <AboutUs />
@@ -16,6 +18,7 @@ const App = () => {
       <FindUs />
       <Gallery />
       <Footer />
+      </HelmetProvider>
     </div>
   )
 };
