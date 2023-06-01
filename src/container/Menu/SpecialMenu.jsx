@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { SubHeading, MenuItem } from '../../components';
 import { images, data } from '../../constants';
+import PdfDrink from '../../assets/Folklor drinks v2.pdf';
+import PdfFood from '../../assets/FOLKLOR FOOD MENU FINAL.pdf';
 // import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import './SpecialMenu.css';
 
@@ -24,10 +26,22 @@ return (
     <h2 className='headtext__cormorant'>Menu</h2>
 </div>
 
-<div className='app__specialMenu-menu'>
+{/* <div className='app__specialMenu-menu'>
     <div className='app__specialMenu-menu_heading'>Coming soon!</div>
+</div> */}
+<div className='app__specialMenu-menu'>
+<a href={PdfFood} style={{textAlign:'center', marginLeft: '0.5rem', marginRight:'0.5rem', marginBottom:'0.5rem'}} target="_blank">
+      <button className='custom__button_mobile'>
+        Food
+      </button>
+      </a>
+    <a href={PdfDrink} style={{textAlign:'center', marginLeft: '0.5rem', marginRight:'0.5rem', marginBottom:'0.5rem'}} target="_blank">
+    <button className='custom__button_mobile'>
+        Drinks
+      </button>
+    </a>
+    
 </div>
-
 
 
 {/* //     <Tabs className="Tabs">
