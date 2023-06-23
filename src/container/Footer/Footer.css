@@ -92,10 +92,28 @@
     }
 }
 
+.work__hours-table {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--color-white);
+    font-family: var(--font-base);
+}
+
+.work__hours-table td {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.work__hours-table td:first-child {
+    font-weight: bold;
+}
+
 @media screen and (max-width: 650px) {
     .app__footer {
-        padding: 0 0 2rem 0;
-        margin:0;
+        padding: 0 0 1rem 0;
+        margin: 0;
     }
 }
 

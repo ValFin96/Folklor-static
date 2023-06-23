@@ -1,17 +1,16 @@
 import React from 'react';
-import { SubHeading } from '../../components';
 import './Header.css';
 
 
 const Header = () => {
   function handleClick() {
-    window.open("https://www.opentable.com.au/r/folklor-restaurant-and-bar-reservations-dawes-point?restref=196004&lang=en-AU&ot_source=Restaurant%20website")
+    window.location.href="/reservations"
   }
 
 return(
   <div className="app__header app__wrapper section__padding" id="home">
     <div className='app__wrapper_info'>
-      {/* <SubHeading title="Chase the new flavour"/> */}
+      
       <h1 className="app__header-h1">The Ultimate Peruvian-Asian Fusion Destination</h1>
       <h1 className="p__opensans" style={{margin: '2rem 0'}}>
         Welcome to Folklor, where the flavors of many nations blend into a vibrant culinary celebration.
