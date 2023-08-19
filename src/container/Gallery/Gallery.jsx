@@ -17,15 +17,15 @@ const Gallery = () => {
   }
 
   function handleClick() {
-    window.open("https://www.instagram.com/folklorwalshbay/")
+    window.open("https://www.instagram.com/limanikkei_sydney/")
   }
 
   return (
     <div className='app__gallery flex__center'>
       <div className="app__gallery-content">
         <SubHeading title='Instagram' />
-        <h2 className='headtext__cormorant'>Photo Gallery</h2>
-        <p className="p__opensans" style={{ color: '#AAA', marginTop: '2rem' }}>
+        <h2 className='headtext__matter'>Photo Gallery</h2>
+        <p className="p__heebo" style={{ color: '#AAA', marginTop: '2rem' }}>
           Check out our mouthwatering food photography and get a taste of what you can expect from our fusion-inspired dishes.
         </p>
         <button type='button' className='custom__button_desktop' onClick={handleClick}> View More </button>

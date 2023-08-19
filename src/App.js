@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { AboutUs, FindUs, Footer, Gallery, Header, SpecialMenu, BookTable } from './container';
-import { Navbar } from './components';
+import { AboutUs, FindUs, Footer, Gallery, Header, SpecialMenu, BookTable, NotFound } from './container';
+import { Navbar, ReservationsNavbar } from './components';
 import './App.css';
 
 const App = () => {
+
   return (
     <div>
       <HelmetProvider>
         <Router>
-          <Navbar />
+          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/reservations" element={<BookTable />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </Router>
@@ -25,6 +27,7 @@ const App = () => {
 const Home = () => {
   return (
     <>
+    <Navbar/>
       <Header />
       <AboutUs />
       <SpecialMenu />

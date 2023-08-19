@@ -7,7 +7,7 @@ import './Footer.css';
 const Footer = () => {
 
   function handleClickInsta() {
-    window.open("https://www.instagram.com/folklorwalshbay/")
+    window.open("https://www.instagram.com/limanikkei_sydney/")
   }
 
   function handleClickFb() {
@@ -23,12 +23,12 @@ const Footer = () => {
       <div className='app__footer-links'>
         <div className='app__footer-links_contact'>
           <h2 className='app__footer-headtext'>Contact Us</h2>
-          <a className='p__opensans' style={{ textDecoration: 'underline', textTransform: 'none' }} href="mailto:hola@folklorrestaurant.com.au">hola@folklorrestaurant.com.au</a>
-          <p className='p__opensans'>Shop 7&8 16A Hickson Road, Dawes Point NSW 2000</p>
-          <p className='p__opensans'></p>
+          <a className='p__heebo' style={{ textDecoration: 'underline', textTransform: 'none' }} href="mailto:hola@limarestaurant.com.au">hola@limarestaurant.com.au</a>
+          <p className='p__heebo'>Shop 7&8 16A Hickson Road, Dawes Point NSW 2000</p>
+          <p className='p__heebo'></p>
         </div>
         <div className='app__footer-links_logo'>
-          <img src={images.folklorFooter} alt="footer_logo" />
+          <img src={images.limaFooter} alt="footer_logo" />
           <div className='app__footer-links_icons'>
             <FiFacebook onClick={handleClickFb} />
             <FiInstagram onClick={handleClickInsta} />
@@ -44,7 +44,7 @@ const Footer = () => {
               </tr>
               <tr>
                 <td>Friday:</td>
-                <td>5 pm - 11 pm</td>
+                <td>12 pm - 3 pm <br></br>5 pm - 11 pm</td>
               </tr>
               <tr>
                 <td>Saturday:</td>
@@ -61,7 +61,7 @@ const Footer = () => {
       </div>
 
       <div className='footer__copyright'>
-        <p className='p__opensans'>2023 Folklor. All Rights Reserved.</p>
+        <p className='p__heebo'>2023 Lima Nikkei. All Rights Reserved.</p>
       </div>
     </div>
   )

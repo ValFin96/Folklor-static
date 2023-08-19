@@ -5,6 +5,8 @@ import Gallery from './Gallery/Gallery';
 import Header from './Header/Header';
 import SpecialMenu from './Menu/SpecialMenu';
 import BookTable from './BookTable/BookTable';
+import NotFound from './NotFound/NotFound';
+
 
 export {
   AboutUs,
@@ -13,5 +15,6 @@ export {
   Gallery,
   Header,
   SpecialMenu,
-  BookTable
+  BookTable,
+  NotFound
 };
