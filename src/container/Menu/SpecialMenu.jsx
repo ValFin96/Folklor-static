@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { SubHeading } from '../../components';
 import PdfDrink from '../../assets/Lima Drinks Menu.pdf';
 import PdfFood from '../../assets/Lima Food Menu.pdf';
+import PretheatreMenu from '../../assets/Pre-theatre Menu.pdf';
 import './SpecialMenu.css';
 
 function SpecialMenu() {
@@ -31,6 +32,16 @@ function SpecialMenu() {
         >
           <button className="custom__button_mobile">Food</button>
         </a>
+
+        <a
+          href={PretheatreMenu}
+          style={{ textAlign: 'center', marginLeft: '0.5rem', marginRight: '0.5rem', marginBottom: '0.5rem' }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="custom__button_mobile">Pre-Theatre</button>
+        </a>
+        
         <a
           href={PdfDrink}
           style={{ textAlign: 'center', marginLeft: '0.5rem', marginRight: '0.5rem', marginBottom: '0.5rem' }}
@@ -39,6 +50,7 @@ function SpecialMenu() {
         >
           <button className="custom__button_mobile">Drinks</button>
         </a>
+        
       </div>
     </div>
   );

@@ -54,11 +54,19 @@ const Navbar = () => {
     };
 }, [prevScrollPos, toggleMenu]);
 
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+
   return (
     <nav className={`app__navbar ${isVisible ? '' : 'hidden'} ${isAtTop ? 'transparent-nav' : 'non-transparent-nav'}`}>
       <div className="app__navbar-logo">
       <ScrollLink to="home" smooth={true} duration={300}>
-          <img src={images.limaLogo} alt="app logo" />
+          <img src={images.limaLogo} alt="app logo" title="Lima Nikkei Restaurant Logo" loading="lazy" width="170" height="auto"/>
         </ScrollLink>
       </div>
       <ul className="app__navbar-links">
@@ -66,7 +74,7 @@ const Navbar = () => {
         <ScrollLink to="home" smooth={true} duration={300}>HOME</ScrollLink>
         </li>
         <li className="p__heebo">
-        <ScrollLink to="about" smooth={true} duration={300}>ABOUT</ScrollLink>
+        <Link to="/about" onClick={() => scrollToSection('about')}>ABOUT</Link>
         </li>
         <li className="p__heebo">
         <ScrollLink to="menu" smooth={true} duration={300}>MENU</ScrollLink>

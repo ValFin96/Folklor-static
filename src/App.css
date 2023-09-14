@@ -53,15 +53,16 @@
 .custom__button_desktop,
 .custom__button_mobile {
   font-size: 17px;
-  min-width: 130px;
+  width: 140px;
   background-color: rgba(0, 0, 0, 0.3);
   border: 2px solid #FFFFFF;
-  padding: 10px 20px;
+  padding: 10px 0;
   color: var(--color-white);
   font-family: "Heebo", sans-serif;
   letter-spacing: 0.04em;
   line-height: 28px;
   cursor: pointer;
+  text-align: center;
   /* min-width: 200px; */
 }
 
@@ -81,7 +82,6 @@
   color: var(--color-white);
   font-weight: 400;
   letter-spacing: 0.04em;
-  text-transform: capitalize;
   line-height: 28px;
   font-size: 16px;
 }
@@ -93,6 +93,7 @@
   line-height: 83.2px;
   letter-spacing: 0.04em;
   text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 
 

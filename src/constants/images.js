@@ -7,6 +7,8 @@ import findus from '../assets/findus.png';
 import limaLogo from '../assets/lima-logo.png';
 import limaFooter from '../assets/lima-footer.png';
 import notfoundImage from '../assets/notfound.png';
+import LimaTeam1 from '../assets/Lima Team 1.webp';
+import LimaTeam2 from '../assets/Lima Team 2.webp';
 
 export default {
   bg,
@@ -17,5 +19,7 @@ export default {
   findus,
   limaLogo,
   limaFooter,
-  notfoundImage
+  notfoundImage,
+  LimaTeam1,
+  LimaTeam2
 };

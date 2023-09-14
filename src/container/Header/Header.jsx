@@ -46,7 +46,7 @@ const Header = () => {
                     <img src={limaImage} alt="header img" className="header__img" />
                 ) : (
                     window.innerWidth > 650 ? (
-                        <video className="header__video" autoPlay loop muted playsInline preload="auto">
+                        <video className="header__video" autoPlay loop muted playsInline preload="auto" width="1920" height="1080">
                             <source src={limaVideo} type="video/mp4" />
                             <source src={limaVideoWebM} type="video/webm" />
                         </video>

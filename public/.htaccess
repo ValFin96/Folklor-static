@@ -2,6 +2,14 @@
 
     RewriteEngine On
     RewriteBase /
+
+    # Add cache control headers for video files
+    <FilesMatch "\.(mp4|webm)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    RewriteEngine On
+    RewriteBase /
     RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

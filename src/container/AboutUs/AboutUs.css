@@ -1,7 +1,22 @@
 .app__aboutus{
     position: relative;
     
+    
 }
+/* Absolute positioning for the image */
+.app__team-photo {
+    position: absolute;
+    width: 70%;
+    text-align: center; /* Center the image horizontally */
+    top: 55%; /* Position the top edge of the element at the middle of the parent */
+  }
+  
+  /* Image styles */
+  .app__team-photo img {
+    width: 70%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
 
 .app__aboutus-overlay{
     position: absolute;
@@ -18,6 +33,7 @@
 .app__aboutus-content{
     width: 100%;
     z-index: 0;
+    margin-bottom: 19rem;
     
 }
 
@@ -66,25 +82,56 @@
         }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1600px) {
+    .app__team-photo {
+        position: absolute; /* Remove absolute positioning on mobile */
+        top: 60%; /* Remove the top position on mobile */
+        width: 80%; /* Adjust width for mobile */
+        margin: 0 auto; 
+      }
+}
+
+@media screen and (max-width: 1150px) {
 .app__aboutus-content{
     flex-direction: column;
 }
 .app__aboutus-content_knife{
     margin: 4rem 0;
 }
+.app__team-photo {
+    position: absolute; /* Remove absolute positioning on mobile */
+    top: 80%; /* Remove the top position on mobile */
+    width: 100%; /* Adjust width for mobile */
+    margin: 0 auto; 
+  }
+
+  .app__aboutus-content{
+    margin-bottom: 10rem;
+  }
+
 }
 
 @media screen and (max-width: 650px) {
-.app__aboutus-overlay img{
-    width:90%;
-    height: 320px;
-}
-.app__aboutus-content_knife img {
-    height:600px;
-}
+
 .app__aboutus-content_history,
 .app__aboutus-content_about{
     padding: 0;
 }
+
+.app__team-photo {
+    position: absolute; /* Remove absolute positioning on mobile */
+    top: 95%; /* Remove the top position on mobile */
+    width: 100%; /* Adjust width for mobile */
+    margin: 0 auto; 
+  }
+
+  .app__team-photo img {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .app__aboutus-content{
+    margin-bottom: 0;
+  }
+
 }

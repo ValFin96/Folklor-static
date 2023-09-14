@@ -71,14 +71,13 @@
 
 @media screen and (max-width: 1150px) {
     .app__header {
-        margin-top: -6rem;
+        margin-top: -4rem;
     }
 
     .app__header-h1 {
         font-size: 30px;
-        margin: 0;
+        margin-top: 1rem;
     }
-
 }
 
 @media screen and (max-width: 820px) {
