@@ -84,7 +84,7 @@ function scrollToSection(sectionId) {
         </li>
       </ul>
       <div className="app__navbar-book">
-      <Link to="/reservations" className="p__heebo">BOOK TABLE</Link>
+      <Link to="https://www.sevenrooms.com/reservations/limarestaurant?venues=limarestaurant,warikerestaurant" target='_blank' className="p__heebo">BOOK TABLE</Link>
       </div>
 
       <div className="app__navbar-smallscreen">
@@ -107,7 +107,7 @@ function scrollToSection(sectionId) {
               <ScrollLink to="contact" onClick={() => setToggleMenu(false)}>Contact</ScrollLink>
               </li>
               <li className="p__heebo">
-                <Link to="/reservations" onClick={() => setToggleMenu(false)} style={{ lineHeight: '2.5rem' }}>Book Table</Link>
+                <Link to="https://www.sevenrooms.com/reservations/limarestaurant?venues=limarestaurant,warikerestaurant" target="_blank" onClick={() => setToggleMenu(false)} style={{ lineHeight: '2.5rem' }}>Book Table</Link>
               </li>
             </ul>
           </div>

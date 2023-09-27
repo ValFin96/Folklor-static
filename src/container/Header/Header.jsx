@@ -10,8 +10,9 @@ import './Header.css';
 
 const Header = () => {
     function handleClick() {
-        window.location.href = "/reservations"
+        window.open("https://www.sevenrooms.com/reservations/limarestaurant?venues=limarestaurant,warikerestaurant", "_blank");
     }
+    
     const [isSlowConnection, setIsSlowConnection] = useState(false);
 
     useEffect(() => {
