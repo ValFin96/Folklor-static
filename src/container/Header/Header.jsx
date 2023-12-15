@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Cloudinary } from '@cloudinary/url-gen';
 import limaVideo from '../../assets/Lima-front.mp4';
 import limaVideoWebM from '../../assets/Lima-front.webm';
 import limaMobileVideo from '../../assets/Lima-Restaurant.mp4';
@@ -9,6 +10,8 @@ import './Header.css';
 
 
 const Header = () => {
+    const cld = new Cloudinary({cloud: {cloudName: 'dfteihgk4'}});
+    const videoUrl = 'https://res.cloudinary.com/dfteihgk4/video/upload/v1697024934/Lima-front_pnfnzd.mp4'
     function handleClick() {
         window.open("https://www.sevenrooms.com/reservations/limarestaurant?venues=limarestaurant,warikerestaurant", "_blank");
     }
@@ -48,8 +51,8 @@ const Header = () => {
                 ) : (
                     window.innerWidth > 650 ? (
                         <video className="header__video" autoPlay loop muted playsInline preload="auto" width="1920" height="1080">
-                            <source src={limaVideo} type="video/mp4" />
-                            <source src={limaVideoWebM} type="video/webm" />
+                            <source src={videoUrl} type="video/mp4" />
+                            {/* <source src={limaVideoWebM} type="video/webm" /> */}
                         </video>
                         // <img src={limaImage} alt="header img" className="header__img" />
                     ) : (

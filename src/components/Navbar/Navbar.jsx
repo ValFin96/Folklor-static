@@ -25,66 +25,69 @@ const Navbar = () => {
 
   useLayoutEffect(() => {
     const handleScroll = () => {
-        const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.pageYOffset;
 
-        const scrollingUp =  prevScrollPos < 0 || prevScrollPos > currentScrollPos;
+      const scrollingUp = prevScrollPos < 0 || prevScrollPos > currentScrollPos;
 
-        setIsAtTop(currentScrollPos <= 0);
-        setPrevScrollPos(currentScrollPos);
+      setIsAtTop(currentScrollPos <= 0);
+      setPrevScrollPos(currentScrollPos);
 
-        if (scrollingUp) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
+      if (scrollingUp) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
     const debouncedHandleScroll = debounce(handleScroll, 15);
 
     window.addEventListener('scroll', debouncedHandleScroll, { passive: true });
 
     if (toggleMenu) {
-        document.body.classList.add('overflow-hidden');
+      document.body.classList.add('overflow-hidden');
     } else {
-        document.body.classList.remove( 'overflow-hidden');
+      document.body.classList.remove('overflow-hidden');
     }
 
     return () => {
-        window.removeEventListener('scroll', debouncedHandleScroll, { passive: true });
-        document.body.classList.remove( 'overflow-hidden');
+      window.removeEventListener('scroll', debouncedHandleScroll, { passive: true });
+      document.body.classList.remove('overflow-hidden');
     };
-}, [prevScrollPos, toggleMenu]);
+  }, [prevScrollPos, toggleMenu]);
 
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   }
-}
 
 
   return (
     <nav className={`app__navbar ${isVisible ? '' : 'hidden'} ${isAtTop ? 'transparent-nav' : 'non-transparent-nav'}`}>
       <div className="app__navbar-logo">
-      <ScrollLink to="home" smooth={true} duration={300}>
-          <img src={images.limaLogo} alt="app logo" title="Lima Nikkei Restaurant Logo" loading="lazy" width="170" height="auto"/>
+        <ScrollLink to="home" smooth={true} duration={300}>
+          <img src={images.limaLogo} alt="app logo" title="Lima Nikkei Restaurant Logo" loading="lazy" width="170" height="auto" />
         </ScrollLink>
       </div>
       <ul className="app__navbar-links">
         <li className="p__heebo">
-        <ScrollLink to="home" smooth={true} duration={300}>HOME</ScrollLink>
+          <ScrollLink to="home" smooth={true} duration={300}>HOME</ScrollLink>
         </li>
         <li className="p__heebo">
-        <Link to="/about" onClick={() => scrollToSection('about')}>ABOUT</Link>
+          <ScrollLink to="about" smooth={true} duration={300}>ABOUT</ScrollLink>
         </li>
         <li className="p__heebo">
-        <ScrollLink to="menu" smooth={true} duration={300}>MENU</ScrollLink>
+          <ScrollLink to="menu" smooth={true} duration={300}>MENU</ScrollLink>
         </li>
         <li className="p__heebo">
-        <ScrollLink to="contact" smooth={true} duration={300}>CONTACT</ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={300}>CONTACT</ScrollLink>
+        </li>
+        <li className="p__heebo">
+          <Link to="https://app.gift-it.com.au/buy/warike-limanikkei" target='_blank' smooth={true} duration={300}>GIFT CARDS</Link>
         </li>
       </ul>
       <div className="app__navbar-book">
-      <Link to="https://www.sevenrooms.com/reservations/limarestaurant?venues=limarestaurant,warikerestaurant" target='_blank' className="p__heebo">BOOK TABLE</Link>
+        <Link to="https://www.sevenrooms.com/reservations/limarestaurant?venues=limarestaurant,warikerestaurant" target='_blank' className="p__heebo">BOOK TABLE</Link>
       </div>
 
       <div className="app__navbar-smallscreen">
@@ -101,10 +104,13 @@ function scrollToSection(sectionId) {
                 <ScrollLink to="about" onClick={() => setToggleMenu(false)}>About</ScrollLink>
               </li>
               <li className="p__heebo">
-              <ScrollLink to="menu" onClick={() => setToggleMenu(false)}>Menu</ScrollLink>
+                <ScrollLink to="menu" onClick={() => setToggleMenu(false)}>Menu</ScrollLink>
               </li>
               <li className="p__heebo">
-              <ScrollLink to="contact" onClick={() => setToggleMenu(false)}>Contact</ScrollLink>
+                <ScrollLink to="contact" onClick={() => setToggleMenu(false)}>Contact</ScrollLink>
+              </li>
+              <li className="p__heebo">
+                <Link to="https://app.gift-it.com.au/buy/warike-limanikkei" target='_blank'>GIFT CARDS</Link>
               </li>
               <li className="p__heebo">
                 <Link to="https://www.sevenrooms.com/reservations/limarestaurant?venues=limarestaurant,warikerestaurant" target="_blank" onClick={() => setToggleMenu(false)} style={{ lineHeight: '2.5rem' }}>Book Table</Link>

@@ -11,10 +11,10 @@ const App = () => {
     <div>
       <HelmetProvider>
         <Router>
-          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/menu" element={<SpecialMenu />} />
             {/* <Route path="/reservations" element={<BookTable />} /> */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
